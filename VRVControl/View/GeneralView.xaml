@@ -16,12 +16,12 @@
                 <Button Width="120" Height="30" Content="Shutdown" Command="commands:StaticCommands.ShutdownCommand" />
             </StackPanel>
             <StackPanel Grid.Column="1" HorizontalAlignment="Left" Margin="0,10,0,0" Width="139">
-                <Button x:Name="btnStartVoiceControl" Content="Enable Voice Control" Command="commands:StaticCommands.EnableVoiceControlCommand" Height="35" Click="btnStartVoiceControl_Click" />
-                <Button x:Name="btnStopVoiceControl" Content="Disable Voice Control" Command="commands:StaticCommands.DisableVoiceControlCommand" Height="35" Click="btnStopVoiceControl_Click" IsEnabled="False" />
+                <Button x:Name="btnStartVoiceControl" Content="Enable Voice Control" Command="commands:StaticCommands.EnableVoiceControlCommand" Height="35" Click="btnStartVoiceControl_Click" Margin="-15,0,0,0" />
+                <Button x:Name="btnStopVoiceControl" Content="Disable Voice Control" Command="commands:StaticCommands.DisableVoiceControlCommand" Height="35" Click="btnStopVoiceControl_Click" IsEnabled="False" Margin="-15,0,0,0" />
                 <Slider x:Name="volumeSlider" Value="{Binding Volume}" Maximum="1" LargeChange="0.01" Height="21" Margin="0,10" />
             </StackPanel>
             <Grid Grid.ColumnSpan="2" Grid.Row="1">
-                <ProgressBar x:Name="volumeProgressBar" Value="{Binding Volume}" Maximum="1" LargeChange="0.01" Margin="10,49,28,0" VerticalAlignment="Top" />
+                <ProgressBar x:Name="volumeProgressBar" Value="{Binding Volume}" Maximum="1" LargeChange="0.01" Margin="10,49,28,0" VerticalAlignment="Top"/>
                 <TextBlock x:Name="textBlock" HorizontalAlignment="Right" Margin="0,19,28,39" Text="{Binding ElementName=volumeProgressBar, Path=Value, StringFormat={}{0:P2}}" />
             </Grid>
             <Label x:Name="label" Content="Volume level:" HorizontalAlignment="Left" Margin="5,12,0,0" Grid.Row="1" VerticalAlignment="Top" />
